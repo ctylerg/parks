@@ -1,0 +1,19 @@
+<p>
+  <strong>Title:</strong>
+  <%= @park.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @park.text %>
+</p>
+
+<h2>Comments</h2>
+<% render @park.comments %>
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Back', parks_path %>
+<%= link_to 'Edit', edit_park_path(@park) %>
